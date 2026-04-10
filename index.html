@@ -392,7 +392,6 @@
             background-image: url('images/dach-hero.jpeg');
             background-size: cover;
             background-position: center;
-
             animation: slowZoom 20s infinite alternate;
         }
 
@@ -662,10 +661,9 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
 
-        /* MID-LOW POSITION for slider text - arrows won't block */
         .slider-text {
             position: absolute;
-            bottom: 15%; /* Moved up from bottom to mid-low */
+            bottom: 15%;
             left: 0;
             right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
@@ -761,7 +759,7 @@
         }
 
         .slider-dot.active::after {
-            animation: fillProgress 10s linear forwards;
+            animation: fillProgress 5s linear forwards;
         }
 
         @keyframes fillProgress {
@@ -897,10 +895,9 @@
             transform: scale(1.1);
         }
 
-        /* MID-LOW POSITION for gallery caption - arrows won't block */
         .gallery-caption {
             position: absolute;
-            bottom: 20%; /* Moved up from bottom to mid-low */
+            bottom: 20%;
             left: 0;
             right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
@@ -1430,7 +1427,6 @@
             color: white;
         }
 
-
         /* Extra small phones */
         @media (max-width: 360px) {
             .hero-text h1 {
@@ -1446,7 +1442,9 @@
                 width: 25px;
                 height: 4px;
             }
-                    /* Hardware acceleration for smooth animations */
+        }
+
+        /* Hardware acceleration for smooth animations */
         .sidebar,
         .service-modal,
         .hero-bg,
@@ -1466,9 +1464,6 @@
                 transition-duration: 0.01ms !important;
             }
         }
-        }
-
-
     </style>
 </head>
 <body>
@@ -1500,7 +1495,7 @@
             <button class="close-btn" onclick="toggleSidebar()" aria-label="Menü schließen">×</button>
         </div>
 
-               <!-- Main Navigation -->
+        <!-- Main Navigation -->
         <div class="sidebar-menu">
             <a href="#home" class="sidebar-link" onclick="toggleSidebar()">
                 <span class="sidebar-icon">🏠</span>
@@ -1515,6 +1510,7 @@
                 KONTAKT
             </a>
         </div>
+
         <!-- Services Section in Sidebar -->
         <div class="sidebar-services-section">
             <div class="sidebar-services-title">Unsere Leistungen</div>
@@ -1799,7 +1795,7 @@
         </div>
     </section>
 
-    <!-- BIG SLIDER - 8 PHOTOS (7 roof + 1 garden) -->
+    <!-- BIG SLIDER - PHOTOS WITH GALLERY FEATURE FROM INDEX.HTML -->
     <section class="showcase scroll-reveal">
         <div class="section-header">
             <span class="section-label">Referenzen</span>
@@ -1889,9 +1885,9 @@
         </div>
     </section>
 
-    <!-- GALLERY - 5 PHOTOS -->
+    <!-- GALLERY - FEATURE FROM INDEX.HTML WITH PROPER STYLING -->
     <section class="gallery-section scroll-reveal">
-        div class="section-header">
+        <div class="section-header">
             <span class="section-label" style="color: rgba(255,255,255,0.8);">Galerie</span>
             <h2>Mehr Eindrücke</h2>
             <p class="section-subtitle">Wischen oder scrollen Sie durch unsere Arbeiten</p>
@@ -1994,7 +1990,6 @@
         <a href="https://wa.me/49135214027" class="btn-whatsapp">💬 WhatsApp</a>
     </div>
 
-
     <!-- JAVASCRIPT -->
     <script>
         // SIDEBAR
@@ -2087,7 +2082,7 @@
                 if (!isPaused) {
                     changeSlide(1);
                 }
-            }, 10000);
+            }, 5000);
         }
 
         function resetAutoPlay() {
